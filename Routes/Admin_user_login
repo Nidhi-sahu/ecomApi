@@ -1,0 +1,16 @@
+const express = require("express");
+const Admin_user_login = express.Router();
+
+const{
+    getAdmin_user_login,
+    postAdmin_user_login,
+    putAdmin_user_login,
+    deleteAdmin_user_login
+} = require("../Controller/admin_user_login");
+
+Admin_user_login.get("/view1",getAdmin_user_login);
+Admin_user_login.post("/insert1",postAdmin_user_login);
+Admin_user_login.put("/update1/:uid",putAdmin_user_login);
+Admin_user_login.delete("/remove/:uid",deleteAdmin_user_login);
+
+module.exports= {Admin_user_login};
